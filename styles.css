@@ -1,0 +1,83 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00ffaa, #2847e0);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+.calculator {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1), 0 0 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: box-shadow 0.3s;
+}
+.calculator:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 187, 0.462), 0 0 40px rgba(0, 157, 255, 0.988), 0 0 60px rgb(0, 106, 255);
+}
+.display {
+    background-color: #333;
+    padding: 20px;
+    text-align: right;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.display input {
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 2em;
+    color: white;
+    text-align: right;
+    margin: 5px 0;
+    outline: none;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover {
+    background-color: #e0e0e0;
+}
+.btn:active {
+    background-color: #ccc;
+    transform: scale(0.98);
+}
+.btn.operator {
+    background-color: #0088ff;
+    color: white;
+}
+.btn.operator:hover {
+    background-color: #0065e0;
+}
+.btn.equal {
+    background-color: #34c7ac;
+    color: white;
+    grid-column: span 2;
+}
+.btn.equal:hover {
+    background-color: #2fa989;
+}
+.btn.clear {
+    background-color: #4f30ff;
+    color: white;
+}
+.btn.clear:hover {
+    background-color: #2847e0;
+}
